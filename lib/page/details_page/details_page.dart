@@ -78,7 +78,7 @@ class _ContactInfoPageState extends State<ContactInfoPage> {
                         setState(() {
                           _selected = 0;
                         });
-                        log("Contact clicked...");
+                        log("Student Data...");
                       },
                       child: Container(
                         alignment: Alignment.center,
