@@ -11,6 +11,6 @@ class AppRoutes {
   static Map<String, WidgetBuilder> route = {
     splashScreen: (context) => const SplashScreen(),
     homepage: (context) => const HomePage(),
-    detailspage: (context) => const DetailsPage(),
+    detailspage: (context) => const ContactInfoPage(),
   };
 }
