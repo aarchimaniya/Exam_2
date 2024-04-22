@@ -47,8 +47,7 @@ class _ContactInfoPageState extends State<ContactInfoPage> {
 
   TextEditingController nameController = TextEditingController(text: "Aarchi");
   TextEditingController GRIDController = TextEditingController(text: "3489");
-  TextEditingController StandardController =
-      TextEditingController(text: "Abc@6060");
+  TextEditingController StandardController = TextEditingController(text: "12");
 
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
@@ -64,9 +63,13 @@ class _ContactInfoPageState extends State<ContactInfoPage> {
         child: Scaffold(
           // resizeToAvoidBottomInset: false,
           appBar: AppBar(
-            title: const Text("Student Information"),
+            backgroundColor: Colors.white,
+            title: const Text(
+              "Student Information",
+              style: TextStyle(color: Colors.black),
+            ),
           ),
-          backgroundColor: Colors.grey.shade200,
+          backgroundColor: Colors.black,
           body: Column(
             children: [
               //TabBar
@@ -88,13 +91,14 @@ class _ContactInfoPageState extends State<ContactInfoPage> {
                             begin: Alignment.topRight,
                             end: Alignment.topLeft,
                             colors: <Color>[
-                              Color(0xff003C43),
-                              Color(0xffE3FEF7)
+                              Color(0xffF6F5F2),
+                              Color(0xffE5E1DA),
+                              Color(0xFF45474B),
                             ],
                           ),
                           border: Border(
                             bottom: BorderSide(
-                              color: Colors.amber,
+                              color: Color(0xFFD5EEBB),
                               width: _selected == 0 ? 4 : 0,
                             ),
                           ),
@@ -102,7 +106,7 @@ class _ContactInfoPageState extends State<ContactInfoPage> {
                         child: const Text(
                           "Student Data",
                           style: TextStyle(
-                            color: Colors.white,
+                            color: Colors.black,
                             fontSize: 18,
                           ),
                         ),
@@ -125,13 +129,14 @@ class _ContactInfoPageState extends State<ContactInfoPage> {
                             begin: Alignment.topRight,
                             end: Alignment.topLeft,
                             colors: <Color>[
-                              Color(0xff003C43),
-                              Color(0xffE3FEF7)
+                              Color(0xffF6F5F2),
+                              Color(0xffE5E1DA),
+                              Color(0xFF45474B),
                             ],
                           ),
                           border: Border(
                             bottom: BorderSide(
-                              color: Colors.amber,
+                              color: Color(0xFFD5EEBB),
                               width: _selected == 1 ? 4 : 0,
                             ),
                           ),
@@ -139,7 +144,7 @@ class _ContactInfoPageState extends State<ContactInfoPage> {
                         child: const Text(
                           "Image",
                           style: TextStyle(
-                            color: Colors.white,
+                            color: Colors.black,
                             fontSize: 18,
                           ),
                         ),
@@ -171,9 +176,7 @@ class _ContactInfoPageState extends State<ContactInfoPage> {
                                   // controller: nameController,
                                   initialValue: StudentDataPgval.GRID,
                                   textInputAction: TextInputAction.done,
-                                  // onChanged: (val) {
-                                  //   ContactPageVal.name = val;
-                                  // },
+
                                   validator: (val) {
                                     if (val!.isEmpty) {
                                       return "Enter your Name...";
@@ -192,12 +195,13 @@ class _ContactInfoPageState extends State<ContactInfoPage> {
                                     log("==============");
                                   },
                                   decoration: InputDecoration(
-                                    prefixIcon: const Icon(Icons.person),
+                                    prefixIcon: const Icon(
+                                        Icons.drive_file_rename_outline),
                                     suffixIcon: Padding(
                                       padding:
                                           const EdgeInsets.only(right: 8.0),
                                       child: Icon(
-                                        Icons.contact_mail,
+                                        Icons.school,
                                         color: iconColor,
                                       ),
                                     ),
@@ -219,7 +223,7 @@ class _ContactInfoPageState extends State<ContactInfoPage> {
                                     focusedBorder: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(50),
                                       borderSide: const BorderSide(
-                                        color: Colors.green,
+                                        color: Colors.black,
                                         width: 2,
                                       ),
                                     ),
@@ -237,7 +241,7 @@ class _ContactInfoPageState extends State<ContactInfoPage> {
                                   validator: (val) {
                                     return (val!.isEmpty)
                                         ? "Enter your GRID..."
-                                        : (val.length == 10)
+                                        : (val.length == 4)
                                             ? null
                                             : "GRID is not required";
                                   },
@@ -245,9 +249,10 @@ class _ContactInfoPageState extends State<ContactInfoPage> {
                                     StudentDataPgval.GRID = val ?? "";
                                   },
                                   textInputAction: TextInputAction.next,
-                                  maxLength: 10,
+                                  maxLength: 4,
                                   decoration: InputDecoration(
-                                    prefixIcon: const Icon(Icons.dialpad),
+                                    prefixIcon:
+                                        const Icon(Icons.numbers_outlined),
                                     labelText: "GRID ",
                                     hintText: "Enter your GRID",
                                     hintStyle: TextStyle(
@@ -266,7 +271,7 @@ class _ContactInfoPageState extends State<ContactInfoPage> {
                                     focusedBorder: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(50),
                                       borderSide: const BorderSide(
-                                        color: Colors.green,
+                                        color: Colors.black,
                                         width: 2,
                                       ),
                                     ),
@@ -301,7 +306,6 @@ class _ContactInfoPageState extends State<ContactInfoPage> {
                                           ? Icons.visibility_off
                                           : Icons.visibility),
                                     ),
-                                    prefixIcon: const Icon(Icons.password),
                                     labelText: "Standard",
                                     hintText: "Enter your standard",
                                     hintStyle: TextStyle(
@@ -320,7 +324,7 @@ class _ContactInfoPageState extends State<ContactInfoPage> {
                                     focusedBorder: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(50),
                                       borderSide: const BorderSide(
-                                        color: Colors.green,
+                                        color: Colors.black,
                                         width: 2,
                                       ),
                                     ),
@@ -342,7 +346,7 @@ class _ContactInfoPageState extends State<ContactInfoPage> {
                                           log(StudentDataPgval.Standard);
 
                                           SnackBar snackBar = SnackBar(
-                                            backgroundColor: Colors.green,
+                                            backgroundColor: Colors.black,
 
                                             margin: const EdgeInsets.all(15),
                                             // width: 200,
@@ -415,6 +419,7 @@ class _ContactInfoPageState extends State<ContactInfoPage> {
                               child: const Text(
                                 "ADD",
                                 style: TextStyle(
+                                  color: Colors.black,
                                   fontSize: 25,
                                 ),
                               ),
@@ -456,7 +461,7 @@ class _ContactInfoPageState extends State<ContactInfoPage> {
                                 );
                               },
                               child: CircleAvatar(
-                                backgroundColor: Colors.blueAccent,
+                                backgroundColor: Colors.black,
                                 child: Icon(
                                   Icons.camera,
                                   color: Colors.white,

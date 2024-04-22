@@ -13,6 +13,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.sizeOf(context);
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         backgroundColor: Colors.black,
         centerTitle: true,
@@ -32,7 +33,11 @@ class _HomePageState extends State<HomePage> {
                 gradient: LinearGradient(
                   begin: Alignment.topRight,
                   end: Alignment.topLeft,
-                  colors: <Color>[Color(0xff003C43), Color(0xffE3FEF7)],
+                  colors: <Color>[
+                    Color(0xffF6F5F2),
+                    Color(0xffE5E1DA),
+                    Color(0xFF45474B),
+                  ],
                 ),
                 borderRadius: BorderRadius.circular(30),
                 color: Color(0xff874CCC),
@@ -73,7 +78,11 @@ class _HomePageState extends State<HomePage> {
                     gradient: LinearGradient(
                       begin: Alignment.topRight,
                       end: Alignment.topLeft,
-                      colors: <Color>[Color(0xff003C43), Color(0xffE3FEF7)],
+                      colors: <Color>[
+                        Color(0xffF6F5F2),
+                        Color(0xffE5E1DA),
+                        Color(0xFF45474B),
+                      ],
                     ),
                     borderRadius: BorderRadius.circular(30),
                     color: Color(0xff874CCC),
@@ -112,7 +121,11 @@ class _HomePageState extends State<HomePage> {
                         gradient: LinearGradient(
                           begin: Alignment.topRight,
                           end: Alignment.topLeft,
-                          colors: <Color>[Color(0xff003C43), Color(0xffE3FEF7)],
+                          colors: <Color>[
+                            Color(0xffF6F5F2),
+                            Color(0xffE5E1DA),
+                            Color(0xFF45474B),
+                          ],
                         ),
                         borderRadius: BorderRadius.circular(30),
                       ),
